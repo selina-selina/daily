@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daily Outlook</title>
+  <!-- Google Fonts: Montserrat & Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Radley:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #fff;
+      --color-text: #595959;
+      --color-subtle: #666;
+      --color-accent: #f97316;
+      --max-width: 700px;
+      --radius: 12px;
+      --card-bg: #fafbfc;
+      --card-border: #e5e7eb;
+    }
+    html, body {
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: 'Fraunces', Arial, sans-serif;
+      font-size: 10px;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    nav {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 0 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: transparent;
+    }
+    nav h1 {
+      font-family: 'Fraunces', Arial, sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--color-text);
+      text-transform: uppercase;
+      margin: 0;
+      padding: 0;
+    }
+    main {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem 2rem 1.5rem;
+      background: transparent;
+    }
+    section {
+      margin-bottom: 3.5rem;
+    }
+    h2 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--color-text);
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+    .card-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+    .card {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 1.3rem 1.4rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .card:hover {
+      background: #f3f4f6;
+    }
+    .card h3 {
+      font-family: 'Radley', Arial, sans-serif;
+      font-size: 1.08rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--color-text);
+      margin: 0 0 0.35rem 0;
+      text-transform: uppercase;
+    }
+    .card p {
+      font-size: 1rem;
+      color: var(--color-subtle);
+      margin: 0;
+      font-family: 'Radley', Arial, sans-serif;
+    }
+    .card span {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.01rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      align-self: flex-start;
+      letter-spacing: 0.05em;
+      margin-left: 1.1rem;
+      transition: color 0.2s;
+    }
+    .card:hover span {
+      color: #222;
+    }
+    @media (max-width: 800px) {
+      nav, main {
+        max-width: 98vw;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      body {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1>Daily Outlook</h1>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Section 1: News -->
+    <section>
+      <h2>News Websites</h2>
+      <div class="card-list">
+        <a href="https://www.nseindia.com/market-data/live-market-indices" class="card" target="_blank" rel="noopener noreferrer">
+          <div>
+            <h3>Nifty Indices overview</h3>
+            <p>Sectoral movements</p>
+          </div>
+          <span>Open</span>
+        </a>
+        <a href="https://www.moneycontrol.com/stocksmarketsindia/heat-map-advance-decline-ratio-nse-bse" class="card" target="_blank" rel="noopener noreferrer">
+          <div>
+            <h3>Money Control heatmap</h3>
+            <p>Nifty advance decline ratio heatmap.</p>
+          </div>
+          <span>Open</span>
+        </a>
+        <a href="https://www.msn.com/en-in/money" class="card" target="_blank" rel="noopener noreferrer">
+          <div>
+            <h3>MSN</h3>
+            <p>Microsoft Finance dashboard with financial news and updates.</p>
+          </div>
+          <span>Open</span>
+        </a>
+        <a href="https://web.sensibull.com/stock-market-calendar/economic-calendar" class="card" target="_blank" rel="noopener noreferrer">
+          <div>
+            <h3>Economic & Stock Results Calendar</h3>
+            <p>Calendar of upcoming Economic Events and Stock Results.</p>
+          </div>
+          <span>Open</span>
+        </a>
+        <a href="https://www.rbi.org.in/Scripts/Statistics.aspx" class="card" target="_blank" rel="noopener noreferrer">
+          <div>
+            <h3>Indian Macro Indicators</h3>
+            <p>Real Time Macroeconomic Insights for Personal Finance</p>
+          </div>
+          <span>Open</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Section 2: Tools and Others -->
+    <section>
+      <h2>Tools and Others</h2>
+      <div class="card-list">
+        <a href="https://in.tradingview.com/chart/QmDuEqN6/?symbol=NSE%3ANIFTY" class="card" target="_blank" rel="noopener noreferrer">
+          <div>
+            <h3>TradingView</h3>
+            <p>Technical movements screener</p>
+          </div>
+          <span>Open</span>
+        </a>
+        <a href="https://www.screener.in/" class="card" target="_blank" rel="noopener noreferrer">
+          <div>
+            <h3>Screener</h3>
+            <p>Stock analysis and screening tool</p>
+          </div>
+          <span>Open</span>
+        </a>
+        <a href="https://www.youtube.com/@retailoptions" class="card" target="_blank" rel="noopener noreferrer">
+          <div>
+            <h3>Retail Options</h3>
+            <p>Youtube channel</p>
+          </div>
+          <span>Open</span>
+        </a>
+        <a href="https://www.youtube.com/@marketsbyzerodha" class="card" target="_blank" rel="noopener noreferrer">
+          <div>
+            <h3>Markets by Zerodha</h3>
+            <p>Youtube channel</p>
+          </div>
+          <span>Open</span>
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
